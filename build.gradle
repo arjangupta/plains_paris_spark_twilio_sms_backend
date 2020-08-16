@@ -4,6 +4,10 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'com.github.johnrengelman.shadow'
+
 sourceCompatibility = 1.8
 mainClassName = 'HelloSpark'
 
@@ -13,6 +17,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile 'com.sparkjava:spark-core:2.2'
-    compile 'com.twilio.sdk:twilio-java-sdk:4.4.5'
+    compile 'com.sparkjava:spark-core:2.6.0'
+    compile group: 'com.twilio.sdk', name: 'twilio', version: '7.9.0'
+    compile 'org.slf4j:slf4j-simple:1.6.1'
 }
